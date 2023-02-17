@@ -1,11 +1,14 @@
 def binary_search(nums, target):
     low = 0
     high = len(nums) - 1
+    steps = 0
 
     while low <= high:
+        steps += 1
         middle = (low + high) // 2
         
         if nums[middle] == target:
+            print(f"This search took a total of {steps} steps to complete.")
             return middle
         
         elif nums[middle] > target:
